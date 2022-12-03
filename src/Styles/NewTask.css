@@ -1,0 +1,37 @@
+.new-task-container {
+  width: 100%;
+  margin: 15px 0;
+}
+
+.new-task-input {
+  width: 80%;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  padding: 0 10px;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.new-task-input:focus {
+  outline: none;
+}
+
+.new-task-button {
+  margin: auto;
+  width: 10%;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background-color: #2e2e2e;
+  color: rgb(190, 245, 145);
+  font-size: 1rem;
+  font-weight: 100;
+  cursor: pointer;
+}
+
+.new-task-button:hover {
+  color: rgb(163, 248, 93);
+  font-size: 1.2rem;
+  transition: 0.2s;
+}

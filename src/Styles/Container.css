@@ -1,0 +1,21 @@
+.container {
+  width: 60vw;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.title {
+  width: 100%;
+  margin: 0;
+  font-weight: 100;
+  color: rgb(114, 114, 114);
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, #333, #ccc, #333);
+  margin: 10px 0;
+}

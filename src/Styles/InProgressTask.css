@@ -1,0 +1,54 @@
+.task-container {
+  background-color: #1b1b1b;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  width: 100%;
+  min-height: 5vh;
+  max-height: 7vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.task-text {
+  flex-grow: 1;
+  font-size: 1rem;
+  font-weight: 100;
+  color: rgb(235, 235, 235);
+  margin: 0 10px;
+  overflow: auto;
+}
+
+.task-edit-button {
+  flex-grow: 0;
+  background-color: #1b1b1b;
+  border: none;
+  color: rgb(204, 214, 62);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.task-delete-button {
+  flex-grow: 0;
+  background-color: #1b1b1b;
+  border: none;
+  color: rgb(139, 32, 32);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.no-task {
+  font-size: 1rem;
+  font-weight: 100;
+  color: rgb(235, 235, 235);
+}
