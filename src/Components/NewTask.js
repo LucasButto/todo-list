@@ -28,8 +28,8 @@ const NewTask = ({
 
   const submitNewTaskHandler = () => {
     if (inputNewTask !== "") {
-      setInputNewTask("");
       setTasks([...tasks, objTaskHandler()]);
+      setInputNewTask("");
     }
   };
 

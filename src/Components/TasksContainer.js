@@ -13,10 +13,14 @@ const TasksContainer = ({
 }) => {
   const { tasks } = useContext(TaskContext);
 
+  const showNoTasks = tasks.filter(
+    (item) => Boolean(item.isCompleted) === filter
+  );
+
   return (
     <div>
       <h3 className="title">{title}</h3>
-      {Object.entries(tasks).length === 0 ? (
+      {Object.entries(showNoTasks).length === 0 ? (
         <p className="task-container no-task">{noTask}</p>
       ) : (
         tasks
