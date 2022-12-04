@@ -30,7 +30,6 @@ const NewTask = ({
     if (inputNewTask !== "") {
       setInputNewTask("");
       setTasks([...tasks, objTaskHandler()]);
-      console.log(tasks);
     }
   };
 
