@@ -45,3 +45,12 @@
   font-size: 1.2rem;
   transition: 0.2s;
 }
+
+@media screen and (max-width: 1024px) {
+  .new-task-button {
+    font-size: 0.8rem;
+  }
+  .new-task-button:hover {
+    font-size: 0.9rem;
+  }
+}

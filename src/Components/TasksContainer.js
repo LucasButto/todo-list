@@ -26,7 +26,7 @@ const TasksContainer = ({
         tasks
           .filter((item) => Boolean(item.isCompleted) === filter)
           .map((item) => (
-            <div className="task-container ">
+            <div className="task-container">
               <p className={"task-text " + extraClass}>{item.task}</p>
               <input
                 type="checkbox"
