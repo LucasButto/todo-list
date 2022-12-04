@@ -1,9 +1,16 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import TaskContext from "../Contexts/TasksContext";
 import "../Styles/NewTask.css";
 
-const NewTask = () => {
-  const [inputNewTask, setInputNewTask] = useState();
+const NewTask = ({
+  inputNewTask,
+  setInputNewTask,
+  showEditButton,
+  showAddButton,
+  setShowEditButton,
+  setShowAddButton,
+  id,
+}) => {
   const { tasks, setTasks } = useContext(TaskContext);
 
   const taskHandler = (e) => {
@@ -27,6 +34,17 @@ const NewTask = () => {
     }
   };
 
+  const submitEditedTaskHandler = () => {
+    if (inputNewTask !== "") {
+      const newTasks = [...tasks];
+      newTasks[id].task = inputNewTask;
+      setTasks(newTasks);
+      setInputNewTask("");
+      setShowEditButton(false);
+      setShowAddButton(true);
+    }
+  };
+
   return (
     <>
       <div className="new-task-container">
@@ -37,9 +55,19 @@ const NewTask = () => {
           value={inputNewTask}
           onChange={taskHandler}
         />
-        <button className="new-task-button" onClick={submitNewTaskHandler}>
-          Add Task
-        </button>
+        {showAddButton && (
+          <button className="new-task-button" onClick={submitNewTaskHandler}>
+            Add Task
+          </button>
+        )}
+        {showEditButton && (
+          <button
+            className="new-task-button edit"
+            onClick={submitEditedTaskHandler}
+          >
+            Edit Task
+          </button>
+        )}
       </div>
     </>
   );

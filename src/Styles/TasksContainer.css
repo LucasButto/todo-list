@@ -52,3 +52,6 @@
   font-weight: 100;
   color: rgb(235, 235, 235);
 }
+.completed-text {
+  text-decoration: line-through #ac4040 1px;
+}
