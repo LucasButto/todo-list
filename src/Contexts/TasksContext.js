@@ -6,7 +6,7 @@ const TaskContextProvider = ({ children }) => {
   const localTasks = () => {
     let localTasksStorage = localStorage.getItem("TASKS");
     if (localTasksStorage === null) {
-      localStorage.setItem("TASKS", "");
+      localStorage.setItem("TASKS", JSON.stringify([]));
       return [];
     } else {
       return JSON.parse(localTasksStorage);

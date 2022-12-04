@@ -44,6 +44,18 @@ const NewTask = ({
     }
   };
 
+  const enterPressed = (e) => {
+    if (e.key === "Enter") {
+      if (showAddButton) {
+        submitNewTaskHandler();
+      } else {
+        submitEditedTaskHandler();
+      }
+    }
+  };
+
+  window.onkeydown = enterPressed;
+
   return (
     <>
       <div className="new-task-container">
